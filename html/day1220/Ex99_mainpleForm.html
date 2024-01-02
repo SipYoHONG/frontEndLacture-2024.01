@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="#">
+        <fieldset>
+            <legend>로그인 정보</legend>
+        <ol>
+        <li>
+            <label for="uesrid">아이디</label>
+            <input type="text" id="userid" required>
+        </li>
+        <li>
+            <label for="pwd1">패스워드</label>
+            <input type="password" id="pwd1" required/>
+        </li>
+        <li>
+            <label for="pwd2">패스워드 확인</label>    
+            <input type="password" id="pwd2" required/>
+        </li>
+        <li>
+            <label for="lv1">회원 등급</label>   
+            <input type="text" id="lv1" value="준회원" readonly/>
+        </li>    
+        </ol>
+        </fieldset>
+    
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ol>
+            <li>
+            <!-- 
+                ㄱ , 힣 : 한글
+                a - z : 소문자
+                A - Z : 대문자
+                a - Z : 알파벳
+                0 - 9 : 숫자   
+            -->
+            <label for="userName">이름</label>
+            <input type="text" id="userName" placeholder="5자미만 공백없이" 
+            pattern="[ㄱ-힣]+" maxlength="5" required /> 
+            </li>
+            <li>
+            <label for="email">메일주소</label>
+            <input type="text" id="email" placeholder="abcd@domain.com" required />
+            </li>
+            <li>
+            <label for="tel">연락처</label>
+            <input type="text" id="tel" pattern="(010)-/d{3,4}-/d{4}" required /> 
+            </li>
+            <li>
+            <label for="date">생일</label>
+            <input type="date" id="date">
+            </li>
+        </ol>
+    </fieldset>
+    
+
+    <fieldset>
+        <legend>코딩 숙련도(상,중,하)</legend>
+    <ol>    
+    1. 
+    <input type="range" list="ww"/>
+        <!-- 눈금을 보이게 하는 태그 : datalist -->
+    <datalist id="ww">
+      <option value="20"></option>
+      <option value="50"></option>
+      <option value="80"></option>
+    </datalist>
+    </ol>
+    </fieldset>
+    <fieldset>
+        <button type="submit">제출</button>
+    </fieldset>
+
+
+
+</form>
+    
+</body>
+</html>
