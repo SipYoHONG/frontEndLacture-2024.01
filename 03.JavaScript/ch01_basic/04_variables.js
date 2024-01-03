@@ -49,3 +49,5 @@ alpha = 123;
 beta = 456;
 console.log(typeof alpha, typeof beta);
 
+
+
