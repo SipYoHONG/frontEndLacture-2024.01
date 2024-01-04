@@ -1,8 +1,8 @@
 // 백준도장 2480
 // 주사위 세개
-let dice1 = Math.ceil(Math.eandom()*6);
-let dice2 = Math.ceil(Math.eandom()*6);
-let dice3 = Math.ceil(Math.eandom()*6);
+let dice1 = Math.ceil(Math.random()*6);
+let dice2 = Math.ceil(Math.random()*6);
+let dice3 = Math.ceil(Math.random()*6);
 let prize = 0;
 
 if (dice1 == dice2 && dice2 == dice3) {
