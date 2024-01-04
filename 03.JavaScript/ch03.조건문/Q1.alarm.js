@@ -15,4 +15,4 @@ if (minute >= 45) {
         newMin = minute +60 -45;
     }
 }
-console.log('${hour}시 ${minute}분 --> ${newHour}시 ${newMin}분');
+console.log(`${hour}시 ${minute}분 --> ${newHour}시 ${newMin}분`);
