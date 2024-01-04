@@ -10,31 +10,32 @@
 //     sum += i;
 // }
 // console.log(sum);
-// let count = 0;
-// let sum = 0;
+let num = 0;
+let sum = 0;
  
-// for (let i = 2; i <= 10000; i++) {
-//     let s = 0;
-//     for (let k = 1; k <= i/2; k++) {
-//         if(i%k == 0) {
-//             s += k;
-//         }
-//     }
-//     if(i==s) {
-//         console.log(i + " ");
-//         ++count;
-//         sum += i;
-//     }
-// }
-for(let i =2; i <= 10000; i++){
-    let divSum = 0;
-    for (let k = 1; k < i; k++){            // 1에서부터 자기자신 전까지
-        if( i%k == 0 )                      // 약수의 합 구하기
-            divSum += k;
+for (let i = 2; i <= 10000; i++) {
+    let s = 0;
+    for (let k = 1; k <= i/2; k++) {
+        if(i%k == 0) {
+            s += k;
+        }
     }
-    if( i == divSum)
-        console.log(i);
+    if(i==s) {
+        console.log(i + " ");
+        ++num;
+        sum += i;
+    }
 }
+// for(let i =2; i <= 10000; i++){
+//     let divSum = 0;
+//     for (let k = 1; k < i; k++){            // 1에서부터 자기자신 전까지
+//         if( i%k == 0 )                      // 약수의 합 구하기
+//             divSum += k;
+//     }
+//     if( i == divSum)
+//         console.log(i);
+// }
+
 
 // 2. a + b + c = 1000 을 만족하는 피타고라스 수 (단, a < b < c) 
 // let answer = [];
