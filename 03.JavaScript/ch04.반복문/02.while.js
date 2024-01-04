@@ -12,7 +12,7 @@ let sum = 0;
 while (sum <= 21) {
     let dice = Math.ceil(Math.random()*6)
     console.log(dice);
-    sum += dice;
+    sum += dice; // 조건을 변화하는 실행문이 없으면 무한 루프에 빠진다, 탈출하려면 Ctrl + C 
 }
 console.log(sum);
 
