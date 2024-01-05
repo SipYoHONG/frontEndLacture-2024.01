@@ -49,7 +49,7 @@ function addarr(arr) {
 squaredSum = sum - sumSquared;
 console.log(`합의 제곱은 ${sumSquared}`);
 console.log(`제곱의 합은 ${squaredSum}`);
-return squaredSum;
+return  squaredSum - sumSquared ;
 }
 
 let numArray = [24, 67, 45, 97, 43]
