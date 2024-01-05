@@ -3,10 +3,10 @@
 
 const birthdate = new Date('1996-09-16');
 const now = new Date();
-let age = now.getFullYear() - birthdate.getFullYear();
-if  (now.getMonth() < birthdate.getMonth() ||  
-    (now.getMonth() == birthdate.getMonth() && now.getDate() < birthdate.getDate())){
-        age--;
+    let age = now.getFullYear() - birthdate.getFullYear();
+        if  (now.getMonth() < birthdate.getMonth() ||  
+            (now.getMonth() == birthdate.getMonth() && now.getDate() < birthdate.getDate())){
+            age--;
     }
     console.log(`만 ${age}입니다`);
 
@@ -18,7 +18,7 @@ if  (now.getMonth() < birthdate.getMonth() ||
 function isDivisible(year) {
         const T = year % 100;
         const N = (year + 1) % T === 0;
-    
+
         return N;
     }
     
@@ -47,9 +47,10 @@ function addarr(arr) {
     }
 
 squaredSum = sum - sumSquared;
+console.log(`합의 제곱은 ${sumSquared}`);
+console.log(`제곱의 합은 ${squaredSum}`);
 return squaredSum;
 }
 
 let numArray = [24, 67, 45, 97, 43]
-
-console.log(`차이는 ${addarr(numArray)}다.`)
+console.log(`차이는 ${addarr(numArray)}다.`);
