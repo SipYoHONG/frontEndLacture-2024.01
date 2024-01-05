@@ -18,9 +18,9 @@ console.log(divisors);
 
 // 두 수의 공약수 구하기
 let num1 = 24, num2 =60;
-let commmonDivisors = [];
+let commonDivisors = [];
 for (let i = 1; i <= Math.min(num1,num2); i++){
     if (num1 % i == 0 && num2 % i == 0)
-        commmonDivisors.push(i);
+        commonDivisors.push(i);
 }
-console.log(`${num1}, ${num2}의 공약수는 ${commmonDivisors}`);
+console.log(`${num1}, ${num2}의 공약수는 ${commonDivisors}`);
