@@ -32,25 +32,22 @@ function isDivisible(year) {
 
 // 3. 어레이를 매개변수로 받아서 합의 제곱과 제곱의 합의 차이를 구하는 함수를 만들고,
 // [24, 67, 45, 97, 43] 의 결과를 출력하세요
+let numArray = [24, 67, 45, 97, 43]
 
 function addarr(arr) {
-    let sum = 0;
+    let dsum = 0;
     let sumSquared = 0;
     let squaredSum =0;
 
     for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+        dsum += arr[i];
     }
-    sum = sum * sum;
+    dsum = dsum * dsum;
     for (let i = 0; i < arr.length; i++) {
         sumSquared += arr[i] * arr[i];
     }
-
-squaredSum = sum - sumSquared;
-console.log(`합의 제곱은 ${sumSquared}`);
-console.log(`제곱의 합은 ${squaredSum}`);
-return  squaredSum - sumSquared ;
+    squaredSum = dsum - sumSquared;
+    return  squaredSum;
 }
 
-let numArray = [24, 67, 45, 97, 43]
 console.log(`차이는 ${addarr(numArray)}다.`);
