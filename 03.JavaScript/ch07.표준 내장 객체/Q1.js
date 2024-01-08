@@ -38,7 +38,7 @@ function findLargestPalindrome() {
 }
 
 let { palindrome, paltotal } = findLargestPalindrome();
-console.log(`제일 큰 palindrome은 ${palindrome} )`);
+console.log(`제일 큰 palindrome은 (${palindrome})이고`);
 console.log(`합쳐진 두 수는 ( ${paltotal[0]} , ${paltotal[1]} )`);
 
 // 4. C:/workspace/WebProject/03.JavaScript/ch07.표준내장객체/04.String연습.js
