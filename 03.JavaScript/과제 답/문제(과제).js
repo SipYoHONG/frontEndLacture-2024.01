@@ -17,7 +17,7 @@ const now = new Date();
 
 function isDivisible(year) {
         const T = year % 100;
-        const N = (year + 1) % T === 0;
+        const N = (year + 1) % T == 0;
 
         return N;
     }
