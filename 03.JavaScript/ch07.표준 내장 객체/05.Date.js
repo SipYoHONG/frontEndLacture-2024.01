@@ -1,3 +1,4 @@
+/*
 // Date 객체
 
 // 1. 현재 날짜/시간
@@ -46,3 +47,4 @@ let gradDay = new Date('2024-06-13 17:30');
 let diffMs = gradDay.getTime() - today
 let diffDay = Math.ceil(diffMs / (1000*60*60*24));
 console.log(diffDay);
+*/

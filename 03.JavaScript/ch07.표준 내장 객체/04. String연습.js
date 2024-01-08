@@ -20,3 +20,4 @@ for (let i = 0; i < numStr.length; i++) {
     countArr[num]++;
 }
 console.log(countArr);
+

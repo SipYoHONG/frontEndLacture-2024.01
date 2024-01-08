@@ -17,7 +17,7 @@ let hello = '안녕하세요?';
 // console.log(fruitArray);
 
 // 문자열 일부분 (substring)
-// const today = new Date().toISOString();
+const today = new Date().toISOString();
 // console.log(today);
 // // 2024-01-08T02:06:29.787Z
 // // 날짜 추출: 2024-01-08 
@@ -25,9 +25,9 @@ let hello = '안녕하세요?';
 // console.log(today.substring(0, today.indexOf('T')));
 // console.log(today.split('T')[0]);
 // 시간 추출 : 02:06:29
-// console.log(today.substring(11,19));
-// console.log(today.substring(today.indexOf('T')+1, today.indexOf('.')));
-// console.log(new Date().toLocaleString());       // 2024. 1. 8. 오전 11:16:36
+console.log(today.substring(11,19));
+console.log(today.substring(today.indexOf('T')+1, today.indexOf('.')));
+console.log(new Date().toLocaleString());       // 2024. 1. 8. 오전 11:16:36
 
 // // YYYY-MM-DD hh:mm:ss 형식으로 만들어주는 함수
 // function twoDigit(num) {
@@ -68,9 +68,9 @@ let hello = '안녕하세요?';
 // console.log(spe);
 
 //문자열 찾기 
-console.log(hello.indexOf('안녕'));     // 결과값이 0 이상이면 찾는 문자열이 있음
-let search = 'hello';
-if (hello.indexOf(search) >= 0)
-    console.log(`찾고싶은 단어 ${search} 이/가 문장안에 있습니다.`);
-else 
-    console.log(`찾고싶은 단어 ${search} 이/가 문장안에 없습니다.`);
+//console.log(hello.indexOf('안녕'));     // 결과값이 0 이상이면 찾는 문자열이 있음
+//let search = 'hello';
+//if (hello.indexOf(search) >= 0)
+  //  console.log(`찾고싶은 단어 ${search} 이/가 문장안에 있습니다.`);
+//else 
+  // console.log(`찾고싶은 단어 ${search} 이/가 문장안에 없습니다.`);
