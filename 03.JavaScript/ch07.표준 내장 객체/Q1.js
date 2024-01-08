@@ -9,8 +9,9 @@ for( let h=0; h<24; h++) {
             if(m.toString().includes('3')) totalsum += 60
             }
         }
-    }
-console.log(`시간초는${totalsum}입니다.`)
+    };
+
+console.log(`시간초는${totalsum}입니다.`);
 
 // 3. 두개의 세자리수를 곱해서 나온 결과가 palindrome일때
 // 가장 큰 palindrome 수와 어떤 수를 곱해서 나온 결과인가?
@@ -39,7 +40,7 @@ function findLargestPalindrome() {
 
 let { palindrome, paltotal } = findLargestPalindrome();
 console.log(`제일 큰 palindrome은 (${palindrome})이고`);
-console.log(`합쳐진 두 수는 ( ${paltotal[0]} , ${paltotal[1]} )`);
+console.log(`합쳐진 두 수는 ${paltotal[0]}, ${paltotal[1]} 입니다.`);
 
 // 4. C:/workspace/WebProject/03.JavaScript/ch07.표준내장객체/04.String연습.js
 // 에서 파일명(04.String연습.js)만 출력하세요. 
