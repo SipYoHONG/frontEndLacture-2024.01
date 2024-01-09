@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gPA() {
+            const first1 = parseInt(document.getElementById("first1").value);
+            const second1 = parseInt(document.getElementById("second1").value);
+            if (isNaN(first1) || isNaN(second1) || first1 < 1 || first1 > 20 || second1 < 10 || second1 > 30 || second1 - first1 < 4) {
+        alert("올바른 입력 값을 입력하세요.");
+        return;
+        }
+        const taq = [];
+        let tap = 1;
+        for (let i = first1; i <= second1; i++) {
+            for (let k = 1; k <= i; k++){
+                tap *= 2;
+            }
+            taq.push(`2의 ${i}승 : ${tap} <br> `);
+            tap = 1;
+            }
+            document.getElementById('result').innerHTML = taq;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="first1">
+    <input type="number" id="second1">
+    <br><br>
+    <hr>
+    <button onclick="gPA()">답</button>
+    <hr>
+    <span id="result"></span>
+</body>
+</html>
