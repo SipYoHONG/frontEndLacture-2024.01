@@ -16,11 +16,12 @@
                 let priceStrArr = price.split(';');
 
                 // priceValArr와 newPrices는 값이 같은 배열
-                let priceValArr = priceStrArr.map(x => Number(x));
-                let newPrices = priceStrArr.map(x => Number(x));
+                let priceValArr = priceStrArr.map(Number);
+                let newPrices = priceStrArr.map(Number);
 
                 newPrices.sort((a, b) => b - a); // 내림차순 정렬
                 let resultStr = '';
+
                 for (let element of newPrices)
                     resultStr += element + '<br>';
 
