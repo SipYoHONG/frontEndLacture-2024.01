@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btnAns3').on('click', function() {
+                ans3();
+            });
+
+            function ans3() {
+                let price = $('#price').val();
+                let priceStrArr = price.split(';');
+
+                // priceValArr와 newPrices는 값이 같은 배열
+                let priceValArr = priceStrArr.map(x => Number(x));
+                let newPrices = priceStrArr.map(x => Number(x));
+
+                newPrices.sort((a, b) => b - a); // 내림차순 정렬
+                let resultStr = '';
+                for (let element of newPrices)
+                    resultStr += element + '<br>';
+
+                $('#result3').html(resultStr);
+            }
+        });
+    </script>
+</head>
+<body style="margin: 30px;">
+    <h3>Q3. 내림차순 정렬</h3>
+    <input type="text" id="price" placeholder="가격을 ;으로 분리해서 입력">
+    <button id="btnAns3">확인</button>
+    <hr>
+    <div id="result3"></div>
+</body>
+</html>

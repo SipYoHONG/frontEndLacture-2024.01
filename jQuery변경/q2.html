@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 찾기</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btnAns2').on('click', function() {
+                ans2();
+            });
+
+            function ans2() {
+                let sentence = $('#sentence').val();
+                let search = $('#search').val();
+                // 특수기호 제거, 소문자로 변경
+                let noPunct = sentence.replace(/[-',.\n]/g, '').toLowerCase();
+                let words = noPunct.split(' '); // 공백으로 분리하여 배열로 만듦
+                let count = 0;
+                for (let word of words) {
+                    if (word == search)
+                        count++;
+                }
+                $('#result2').html(`${search} 갯수: ${count}`);
+            }
+        });
+    </script>
+</head>
+<body style="margin: 30px;">
+    <h3>Q2. 특정 단어의 갯수</h3>
+    <textarea id="sentence" cols="80" rows="5"></textarea><br>
+    <input type="text" id="search" placeholder="찾을 단어">
+    <button id="btnAns2">확인</button>
+    <hr>
+    <div id="result2"></div>
+</body>
+</html>
+

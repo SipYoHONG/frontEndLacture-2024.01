@@ -12,14 +12,14 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-    $(document).ready(() => {           
-        $('.box').click(function(e) {
-            $(this).animate({ left: 800, top: 500 }, 1000, function() {
-                $('p').text('이동 완료');
-            })
-        })
-    });   
-</script>
+        $(document).ready(() => {
+            $('.box').click(function(e) {
+                $(this).animate({ left: 800, top: 500 }, 1000, function() {
+                    $('p').text('이동 완료');
+                })
+            });
+        });
+    </script>
 </head>
 <body style="margin: 50px;">
     <div class="box"></div>
