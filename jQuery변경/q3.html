@@ -13,7 +13,7 @@
 
             function ans3() {
                 let price = $('#price').val();
-                let priceStrArr = price.split(';');
+                let priceStrArr = price.split(';'); // split은 ('?') <-값으로 문장을 분리(자른다)해준다는 의미임!
 
                 // priceValArr와 newPrices는 값이 같은 배열
                 let priceValArr = priceStrArr.map(Number);
