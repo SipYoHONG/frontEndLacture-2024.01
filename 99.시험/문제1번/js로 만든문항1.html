@@ -4,23 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주민등록번호</title>
-    <style>
-        .rrn-input {
-            width: 120px;
-            text-align: center;
-            margin-right: 5px;
-            border: 1px solid #ccc;
-            padding: 5px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <label for="dob1">주민등록번호: </label>
-    <input type="text" id="dob1" maxlength="6" oninput="handleInput(this)">
-    <span>-</span>
-    <input type="text" id="dob2" maxlength="7" oninput="handleBackspace(this)">
-    
     <script>
         document.getElementById('dob1').focus();
 
@@ -44,5 +27,23 @@
             }
         }
     </script>
+    <style>
+        .rrn-input {
+            width: 120px;
+            text-align: center;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <label for="dob1">주민등록번호: </label>
+    <input type="text" id="dob1" class="rrn-input" maxlength="6" oninput="handleInput(this)">
+    <span>-</span>
+    <input type="text" id="dob2" class="rrn-input" maxlength="7" oninput="handleBackspace(this)">
+    
+    
 </body>
 </html>

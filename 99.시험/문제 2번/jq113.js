@@ -3,7 +3,7 @@ function updateClock() {
     var year = currentTime.getFullYear();
     var month = currentTime.getMonth() + 1; 
     var day = currentTime.getDate();
-    var week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; 
+    var week = ['일', '월', '화', '수', '목', '금', '토']; 
     var dayOfWeek = week[currentTime.getDay()]; 
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
