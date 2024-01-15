@@ -1,13 +1,13 @@
 function updateClock() {
-    var currentTime = new Date();
-    var year = currentTime.getFullYear();
-    var month = currentTime.getMonth() + 1; 
-    var day = currentTime.getDate();
-    var week = ['일', '월', '화', '수', '목', '금', '토']; 
-    var dayOfWeek = week[currentTime.getDay()]; 
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    let month = currentTime.getMonth() + 1; 
+    let day = currentTime.getDate();
+    let week = ['일', '월', '화', '수', '목', '금', '토']; 
+    let dayOfWeek = week[currentTime.getDay()]; 
+    let hours = currentTime.getHours();
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
 
    
     month = (month < 10 ? "0" : "") + month;
@@ -17,7 +17,7 @@ function updateClock() {
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
 
-    var clockText = year + "-" + month + "-" + day + " (" + dayOfWeek + ") " + hours + ":" + minutes + ":" + seconds;
+    let clockText = year + "-" + month + "-" + day + " (" + dayOfWeek + ") " + hours + ":" + minutes + ":" + seconds;
     
 
     $("#clock").html(clockText);
