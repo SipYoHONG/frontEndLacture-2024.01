@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주민등록번호</title>
+    <style>
+        .rrn-input {
+            width: 120px;
+            text-align: center;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <label for="dob1">주민등록번호: </label>
+    <input type="text" id="dob1" maxlength="6" oninput="handleInput(this)">
+    <span>-</span>
+    <input type="text" id="dob2" maxlength="7" oninput="handleBackspace(this)">
+    
+    <script>
+        document.getElementById('dob1').focus();
+
+        function handleInput(input) {
+            const dob1 = input.value;
+            const dob2 = document.getElementById('dob2');
+
+            if (dob1.length === 6) {
+                dob2.value = '';
+                dob2.focus();
+            } else if (dob1.length > 6) {
+                input.value = dob1.slice(0, 6);
+            }
+        }
+        function handleBackspace(input) {
+            const dob2 = input.value;
+            const dob1 = document.getElementById('dob1');
+
+            if (dob2.length === 0) {
+                dob1.focus();
+            }
+        }
+    </script>
+</body>
+</html>

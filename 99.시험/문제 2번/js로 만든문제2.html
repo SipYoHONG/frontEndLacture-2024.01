@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date and time</title>
+  <style>
+    #clock {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="clock"></div>
+
+<script>
+  function updateClock() {
+    var currentTime = new Date();
+    var year = currentTime.getFullYear();
+    var month = currentTime.getMonth() + 1; 
+    var day = currentTime.getDate();
+    var week = ['일', '월', '화', '수', '목', '금', '토']; 
+    var dayOfWeek = week[currentTime.getDay()]; 
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    month = (month < 10 ? "0" : "") + month;
+    day = (day < 10 ? "0" : "") + day;
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+
+    var clockText = year + "-" + month + "-" + day + " (" + dayOfWeek + ") " + hours + ":" + minutes + ":" + seconds;
+    document.getElementById("clock").innerHTML = clockText;
+  }
+
+
+  setInterval(updateClock, 1000);
+
+  updateClock();
+</script>
+
+</body>
+</html>
